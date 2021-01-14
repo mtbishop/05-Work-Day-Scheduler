@@ -66,18 +66,28 @@ var theDay = [
 
 function getHeaderDate() {
   var currentHeaderDate = moment().format('dddd, MMMM Do');
-  $("#currentDay").text(currentHeaderDate);
+  $('#currentDay').text(currentHeaderDate);
 }
 
 function saveReminders() {
-    localStorage.setItem("theDay", JSON.stringify(theDay));
+  localStorage.setItem('theDay', JSON.stringify(theDay));
 }
 
 function displayReminders() {
-    theDay.forEach(function (_thisHour) {
-        $(`#${_thisHour.id}`).val(_thisHour.reminder);
-    })
+  theDay.forEach(function (_thisHour) {
+    $(`#${_thisHour.id}`).val(_thisHour.reminder);
+  });
 }
 
-function init() {}
+function init() {
+  var localDay = JSON.parse(localStorage.getItem('theDay'));
+
+  if (localDay) {
+    theDay = localDay;
+  }
+
+  saveReminders();
+  displayReminders();
+}
+
 getHeaderDate();
