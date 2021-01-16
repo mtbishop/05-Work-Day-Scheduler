@@ -16,7 +16,10 @@ you are also presented with time blocks for standard 9-5 buisness hours. ✔
 
 You are unable to enter an event in a time block that has already passed.
 
+![demo image](https://github.com/mtbishop/05-Work-Day-Scheduler/blob/ea84efb1e349231a4f51f2ef91bec54b0ecfad08/docs/assets/imgs/WorkDayScheduler%20Demo.PNG)
 
+Repository Link: https://github.com/mtbishop/05-Work-Day-Scheduler
 
+Live Link: https://mtbishop.github.io/05-Work-Day-Scheduler/
 
 
